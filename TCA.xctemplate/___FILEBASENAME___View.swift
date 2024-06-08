@@ -11,14 +11,14 @@ struct ___VARIABLE_moduleName___View: View {
     }
     
     @ViewBuilder
-    //__ This class extends UIViewController. Feel free to modify it if needed
+    //__ This content view
     private var content: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             Text(viewStore.title)
         }
     }
     
-    //__ This class extends UIViewController. Feel free to modify it if needed
+    //__ This is the body for the view
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             content
@@ -29,6 +29,10 @@ struct ___VARIABLE_moduleName___View: View {
     }
 }
 
+#if DEBUG
+
+// MARK: Previews
+
 #Preview {
     let store: Store<___VARIABLE_moduleName___.State, ___VARIABLE_moduleName___.Action> =  .init(
         initialState: ___VARIABLE_moduleName___.State()
@@ -37,3 +41,5 @@ struct ___VARIABLE_moduleName___View: View {
     }
     return ___VARIABLE_moduleName___View(store: store)
 }
+
+#endif
