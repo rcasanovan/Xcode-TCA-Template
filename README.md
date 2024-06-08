@@ -1,7 +1,7 @@
 # Xcode-TCA-Template
 
 ## TCA Architecture 
-![alt tag](https://github.com/rcasanovan/Xcode-VIPER-Architecture-Template/blob/master/Images/projectArchitecture.jpeg?raw=true)
+![alt tag](https://github.com/rcasanovan/Xcode-TCA-Template/blob/main/Images/TCA_image.001.jpeg?raw=true)
 
 References:
 * [The Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture)
