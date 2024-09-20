@@ -29,6 +29,20 @@ struct ___VARIABLE_moduleName___View: View {
     }
 }
 
+// MARK: - Factory
+
+extension ___VARIABLE_moduleName___View {
+    static func make() -> Self {
+        ___VARIABLE_moduleName___View(
+            store: .init(
+                initialState: ___VARIABLE_moduleName___.State()
+            ) {
+                ___VARIABLE_moduleName___()
+            }
+        )
+    }
+}
+
 #if DEBUG
 
 // MARK: Previews
