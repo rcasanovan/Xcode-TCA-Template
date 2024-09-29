@@ -4,7 +4,7 @@
 ![alt tag](https://github.com/rcasanovan/Xcode-TCA-Template/blob/main/Images/TCA_image.001.jpeg?raw=true)
 
 ## Compatibility
-* This template is compatible with TCA 1.10.4.
+* This template is compatible with TCA 1.15.0.
 
 
 ## References:
