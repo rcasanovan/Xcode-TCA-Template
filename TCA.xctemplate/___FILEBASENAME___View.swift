@@ -4,27 +4,23 @@ import ComposableArchitecture
 import SwiftUI
 
 struct ___VARIABLE_moduleName___View: View {
-    private var store: Store<___VARIABLE_moduleName___.State, ___VARIABLE_moduleName___.Action>
+    private var store: StoreOf<___VARIABLE_moduleName___>
     
-    public init(store: Store<___VARIABLE_moduleName___.State, ___VARIABLE_moduleName___.Action>) {
+    public init(store: StoreOf<___VARIABLE_moduleName___>) {
         self.store = store
     }
     
     @ViewBuilder
     //__ This content view
     private var content: some View {
-        WithViewStore(store, observe: { $0 }) { viewStore in
-            Text(viewStore.title)
-        }
+        Text(store.title)
     }
     
     //__ This is the body for the view
     var body: some View {
-        WithViewStore(store, observe: { $0 }) { viewStore in
-            content
-                .onAppear {
-                    store.send(.onAppear)
-                }
+        content
+            .onAppear {
+                store.send(.onAppear)
         }
     }
 }
@@ -48,7 +44,7 @@ extension ___VARIABLE_moduleName___View {
 // MARK: Previews
 
 #Preview {
-    let store: Store<___VARIABLE_moduleName___.State, ___VARIABLE_moduleName___.Action> =  .init(
+    let store: StoreOf<___VARIABLE_moduleName___> =  .init(
         initialState: ___VARIABLE_moduleName___.State()
     ) {
         ___VARIABLE_moduleName___()

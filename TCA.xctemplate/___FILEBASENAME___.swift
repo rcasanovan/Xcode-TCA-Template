@@ -3,8 +3,10 @@
 import ComposableArchitecture
 import Foundation
 
-public struct ___VARIABLE_moduleName___: Reducer {
+@Reducer
+public struct ___VARIABLE_moduleName___ {
     //__ The basic state. Feel free to change this if needed.
+    @ObservableState
     public struct State: Equatable {
         public var title = ""
     }
